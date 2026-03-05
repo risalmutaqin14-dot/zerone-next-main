@@ -24,7 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="id" className={plusJakarta.variable}>
-      <body>
+      <body suppressHydrationWarning>
         <Navbar />
         {children}
         <Footer />

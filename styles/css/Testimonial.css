@@ -1,0 +1,40 @@
+
+section {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.pointer-events-none {
+  pointer-events: none;
+}
+
+.bg-gradient-to-r {
+  background: linear-gradient(to right, #ffffff, rgba(255, 255, 255, 0));
+}
+
+.bg-gradient-to-l {
+  background: linear-gradient(to left, #ffffff, rgba(255, 255, 255, 0));
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 1024px) {
+  section {
+    padding: 60px 15px;
+  }
+
+
+  .flex {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 480px) {
+  section {
+    width: 100%;
+    height: auto;
+    padding: 50px 10px;
+  }
+
+}

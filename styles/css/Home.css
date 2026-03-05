@@ -1,0 +1,509 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Onest:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+  font-family: 'Plus Jakarta Sans', sans-serif;;
+}
+
+.hero-line {
+  width: 100%;
+  min-height: 165vh; /* Menggunakan vh agar tinggi elemen responsif */
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+  padding-top: 0;
+  z-index: 1;
+}
+
+.background-pattern {
+  width: 100%; /* Menggunakan 100% untuk lebar, mengisi seluruh container */
+  height: 100%; /* Menyesuaikan dengan tinggi container */
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  object-fit: cover; /* Memastikan gambar menutupi seluruh area tanpa distorsi */
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 190px;
+  z-index: 5;
+  width: 1004px;
+  max-width: calc(100% - 40px);
+}
+
+.main-title {
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  /* Perubahan di sini: Menggunakan nama font yang benar */
+  font-family: 'Plus Jakarta Sans', sans-serif; 
+  font-size: 49px;
+  font-weight: 700;
+  line-height: 120%;
+  margin: 0 0 30px 0;
+}
+
+.tagline {
+  width: 423px;
+  max-width: 100%;
+  color: #fff;
+  text-align: center;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 120%;
+  margin: 0 0 22px 0;
+}
+
+.tagline2 {
+  text-align: center;
+  font-family: 'Plus Jakarta Sans', sans-serif;;
+  font-size: 36px;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 10px;
+}
+
+.tagline-description {
+  font-size: 24px;
+  margin-bottom: 60px;
+  text-align: center;
+  color: #505d68;
+  font-weight: 500;
+  font-family: 'Plus Jakarta Sans', sans-serif;;
+}
+
+.description {
+  width: 555px;
+  max-width: 100%;
+  text-align: center;
+  font-family: 'Plus Jakarta Sans', sans-serif;;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 153%;
+  margin: 0 0 32px 0;
+  color: #fffcfb;
+}
+
+.cta-button {
+  width: 250px;
+  height: 50px;
+  border-radius: 4px;
+  background: #fff;
+  border: none;
+  color: #000;
+  text-align: center;
+  font-family: 'Plus Jakarta Sans', sans-serif;;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.device-mockup {
+  width: 1200px;
+  height: 100%;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.device-mockup img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.screen-content {
+  width: calc(100% - 6px);
+  height: auto;
+  border-radius: 10px;
+  position: absolute;
+  left: 1px;
+  top: 0;
+  object-fit: contain;
+  max-height: 100%;
+}
+
+.bottom-gradient {
+  position: absolute;
+  top: 778px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 451px;
+  z-index: 30;
+  background: linear-gradient(
+    0deg,
+    #fff 1.41%,
+    rgba(253, 253, 254, 0.9) 17.07%,
+    rgba(249, 250, 251, 0.5) 50.61%,
+    rgba(242, 245, 247, 0) 99.81%
+  );
+  pointer-events: none;
+}
+
+/* disini masalah device hero */
+@media (max-width: 1440px) {
+  .navigation {
+    padding: 0 80px;
+  }
+
+  .device-mockup {
+    position: relative;
+    width: calc(100% - 32px);
+    height: auto;
+    left: auto;
+    top: auto;
+    margin: 40px auto 0;
+    transform: none;
+  }
+
+    .tabHorizontal .containerProduk .section img{
+      display: hidden;
+  }
+}
+
+@media (max-width: 1200px) {
+  .hero-line {
+    height: auto;
+    min-height: 1000px;
+    padding-bottom: 80px;
+  }
+
+  .navigation {
+    padding: 0 40px;
+  }
+
+  .nav-menu {
+    gap: 24px;
+  }
+
+  .nav-item {
+    font-size: 14px;
+  }
+
+  .hero-content {
+    top: 150px;
+    width: 90%;
+    max-width: 800px;
+  }
+
+  .main-title {
+    font-size: 38px;
+    line-height: 125%;
+  }
+
+  .tagline {
+    font-size: 20px;
+    margin-bottom: 18px;
+  }
+
+  .description {
+    font-size: 14px;
+    width: 90%;
+  }
+
+  .cta-button {
+    width: 280px;
+    height: 44px;
+  }
+
+  .device-mockup {
+    position: relative;
+    width: calc(100% - 32px);
+    height: auto;
+    left: auto;
+    top: auto;
+    margin: 40px auto 0;
+    transform: none;
+  }
+
+  .macbook-container {
+    aspect-ratio: 1169 / 794;
+  }
+
+  .bottom-gradient {
+    top: auto;
+    bottom: 0;
+    height: 350px;
+  }
+
+  .tabHorizontal .containerProduk .section img {
+    display: hidden;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-line {
+    height: auto;
+    min-height: 950px;
+  }
+
+  .navigation {
+    padding: 0 30px;
+  }
+
+  .nav-menu {
+    gap: 20px;
+  }
+
+  .nav-item {
+    font-size: 15px;
+  }
+
+  .hero-content {
+    width: 85%;
+    max-width: 750px;
+  }
+
+  .main-title {
+    font-size: 42px;
+  }
+
+  .tagline {
+    font-size: 22px;
+  }
+
+  .description {
+    font-size: 15px;
+  }
+
+  .device-mockup {
+    position: relative;
+    width: calc(100% - 32px);
+    height: auto;
+    left: auto;
+    top: auto;
+    margin: 40px auto 0;
+    transform: none;
+  }
+
+  .tabHorizontal .containerProduk .section img {
+    max-width: 750px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-line {
+    height: auto;
+    min-height: 900px;
+    padding-bottom: 60px;
+  }
+
+  .background-pattern {
+    width: 130%;
+    height: 100%;
+
+    top: -10px;
+  }
+
+  .navigation {
+    padding: 15px 20px;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+    top: 0;
+  }
+
+  .logo {
+    width: 90px;
+    height: 36px;
+  }
+
+  .nav-menu {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-item {
+    font-size: 13px;
+  }
+
+  .hero-content {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: calc(100% - 32px);
+    margin: 40px auto 0;
+    padding: 0 16px;
+  }
+
+  .main-title {
+    font-size: 28px;
+    line-height: 130%;
+    margin-bottom: 20px;
+  }
+
+  .tagline {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  .description {
+    font-size: 14px;
+    line-height: 150%;
+    margin-bottom: 28px;
+    width: 100%;
+  }
+
+  .cta-button {
+    width: 100%;
+    max-width: 280px;
+    height: 48px;
+    font-size: 12px;
+  }
+
+  .device-mockup {
+    position: relative;
+    width: calc(100% - 32px);
+    height: auto;
+    left: auto;
+    top: auto;
+    margin: 40px auto 0;
+    transform: none;
+  }
+
+  .macbook-container {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1169 / 794;
+  }
+
+  .bottom-gradient {
+    position: relative;
+    top: auto;
+
+    width: 110%;
+    height: 300px;
+    margin-top: -150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-line {
+    height: auto;
+    min-height: 750px;
+    padding-bottom: 40px;
+  }
+
+  .hero {
+    max-height: 650px;
+    width: 100%;
+  }
+  .background-pattern {
+    width: 120%;
+  }
+
+  .navigation {
+    padding: 12px 16px;
+    gap: 12px;
+  }
+
+  .logo {
+    width: 75px;
+    height: 30px;
+  }
+
+  .nav-menu {
+    gap: 12px 16px;
+  }
+
+  .nav-item {
+    font-size: 12px;
+  }
+
+  .hero-content {
+    margin-top: 0;
+    padding: 0;
+    width: calc(100% - 24px);
+  }
+
+  .main-title {
+    margin: 0;
+    font-size: 22px;
+    line-height: 130%;
+    margin-bottom: 16px;
+  }
+
+  .tagline {
+    font-size: 16px;
+    line-height: 130%;
+    margin-bottom: 12px;
+  }
+
+  .tagline2 {
+    font-size: 24px;
+    line-height: 130%;
+    margin-bottom: 12px;
+  }
+
+  .description {
+    font-size: 13px;
+    line-height: 155%;
+    margin-bottom: 24px;
+  }
+
+  .tagline-description {
+    font-size: 18px;
+    margin-bottom: 60px;
+    text-align: center;
+    color: #505d68;
+    font-weight: 500;
+  }
+
+  .cta-button {
+    width: 100%;
+    max-width: 240px;
+    height: 46px;
+    font-size: 11px;
+  }
+
+  .device-mockup {
+    width: calc(100% - 24px);
+    margin-top: 32px;
+  }
+
+  .bottom-gradient {
+    height: 250px;
+    margin-top: -350px;
+  }
+}
+
+/* product */
+.containerProduk {
+  position: relative;
+  width: 100%;
+  padding-bottom: 80px;
+}
+
+.containerProduk.sticky-padding {
+  padding-top: 20px; /* padding saat sticky */
+}
+
+.containerProduk .section {
+  position: sticky;
+  padding-top: 120px;
+  top: 0;
+  width: 100%;
+}
+.containerProduk .section img {
+  box-shadow: 0 -10px 18px -20px #00a9e8;
+}

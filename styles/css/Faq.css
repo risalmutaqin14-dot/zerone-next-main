@@ -1,0 +1,66 @@
+/* src/components/Faq.css */
+.faq-list {
+  width: 100%;
+  margin: 0 ;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow: visible;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 10px;
+}
+
+.faq-answer {
+  padding: 0 20px;
+  transition: max-height 0.3s ease-out; 
+  background-color: #f6f9ff;
+  border-left: 2px solid #ccc;
+  color: #757575;
+  border-radius: 10px;
+}
+
+.faq-answer ul {
+  margin: 0.5rem 0 0.7rem 1.5rem;
+  list-style-type: disc; /* titik bulat */
+}
+
+.faq-answer li {
+  margin-bottom: 0.3rem;
+  color: #757575; /* sesuaikan dengan tema */
+}
+
+.faq-answer.open {
+  max-height: 1000px;
+  padding: 20px; /* Set a max-height for the expanded state */
+}
+
+.arrow-up, .arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  transition: transform 0.3s;
+}
+
+.arrow-up {
+  border-bottom: 5px solid #333;
+}
+
+.arrow-down {
+  border-top: 5px solid #333;
+}
+
+.faq-question:hover {
+  color: #007BFF;
+}

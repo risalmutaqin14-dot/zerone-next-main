@@ -1,0 +1,23 @@
+.containerProduk {
+  position: relative;
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+
+
+.containerProduk .section {
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+.containerProduk .section img {
+  box-shadow: 0 -10px 18px -20px #00a9e8;
+}
+
+.section img {
+  transform-origin: center center;
+  will-change: transform;
+}

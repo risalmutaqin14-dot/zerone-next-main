@@ -1,0 +1,82 @@
+/* src/css/Footer.css */
+.footer {
+  background: linear-gradient(90deg,#00BBD7,#0092D7,#6E92D7);
+  color: white;
+  padding: 30px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-top {
+  
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.footer-logo h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.footer-logo p {
+  margin: 10px 0 0;
+  font-size: 14px;
+}
+
+.footer-social a {
+  color: white;
+  margin-right: 20px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section li {
+  margin-bottom: 10px;
+}
+
+.footer-section a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+.footer-registered {
+  display: flex;
+  align-items: center;
+}
+
+.footer-registered img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.footer img{
+  width: 150px;
+  padding-bottom: 20px;
+}

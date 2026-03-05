@@ -1,0 +1,24 @@
+.custom-list {
+  list-style-type: none; /* Menghilangkan bullet point default */
+  padding-left: 20px; /* Menambahkan jarak kiri */
+}
+
+.custom-list li {
+  position: relative;
+  padding-left: 20px;
+}
+
+.custom-list li::before {
+  content: "•"; /* Menggunakan karakter bullet point */
+  font-size: 24px; /* Ukuran bullet */
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: white; /* Menyesuaikan warna bullet */
+}
+
+.custom-list {
+  list-style: none !important; /* JANGAN ada ini */
+  padding-left: 0 !important; /* JANGAN ada ini */
+  color: black;
+}

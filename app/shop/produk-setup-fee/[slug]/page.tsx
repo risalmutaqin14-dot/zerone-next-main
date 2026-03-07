@@ -75,6 +75,8 @@ export default function ShopDetail() {
         <div className="fixed inset-0 z-[1000] flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm transition-all duration-300">
           <div className="bg-white rounded-[32px] w-full max-w-lg p-8 shadow-2xl relative animate-in zoom-in-95 duration-300">
             <button
+              type="button"
+              aria-label="Close customer information modal"
               onClick={() => setIsModalOpen(false)}
               className="absolute top-6 right-6 text-slate-400 hover:text-slate-600 transition-colors"
             >
@@ -173,6 +175,7 @@ export default function ShopDetail() {
               src={product.image}
               alt={product.title}
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover"
               priority
             />

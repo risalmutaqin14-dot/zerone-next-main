@@ -6,6 +6,7 @@ import { Plus_Jakarta_Sans } from "next/font/google"
 import "./globals.css"
 import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
+import FloatingContact from "@/components/FloatingContact";
 
 export const metadata = {
   title: "Zerone Global Solution",
@@ -28,6 +29,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <FloatingContact />
       </body>
     </html>
   )

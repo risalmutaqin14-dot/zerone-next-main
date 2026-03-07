@@ -20,7 +20,12 @@ export default function MobileMenu({ isOpen, onClose }) {
         {/* 1. HEADER (Diam/Fixed di atas) */}
         <div className="flex justify-between items-center p-5 border-b border-gray-100 flex-shrink-0">
           <span className="text-xl font-bold text-gray-800">Menu</span>
-          <button onClick={onClose} className="p-2 hover:bg-gray-100 rounded-full">
+          <button
+            type="button"
+            aria-label="Close mobile menu"
+            onClick={onClose}
+            className="p-2 hover:bg-gray-100 rounded-full"
+          >
             <FontAwesomeIcon icon={faXmark} size="lg" className="text-gray-500" />
           </button>
         </div>

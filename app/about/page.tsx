@@ -30,9 +30,9 @@ export const metadata: Metadata = {
 
 export default function About() {
   return (
-    <div className="about-page bg-white pt-15 md:pt-40">
+    <div className="about-page bg-white pt-28 md:pt-40">
       {/* Deskripsi Zerone */}
-      <section className="features-section container mx-auto lg:px-35 px-8 bg-white">
+      <section className="features-section container mx-auto lg:px-35 px-2 bg-white">
         <div className="container mx-auto flex flex-col lg:flex-row items-start justify-between md:space-y-8 lg:space-y-0 px-6">
           <div className="lg:w-1/3">
             <span className="block md:text-[24px] text-left text-gray-600 mb-2 font-semibold">

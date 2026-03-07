@@ -57,8 +57,9 @@ export default function WorkingProcess() {
       // 1. Entrance Animation Timeline
       const tl = gsap.timeline({
         scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top 80%", // Animasi mulai saat section 80% masuk viewport
+          trigger: headerRef.current || containerRef.current,
+          start: "top 90%", // Mulai lebih cepat saat heading masuk viewport
+          toggleActions: "play none none none",
           once: true,
           invalidateOnRefresh: true,
         },
@@ -136,11 +137,16 @@ export default function WorkingProcess() {
       });
 
       // Recalculate trigger positions after route transition and layout shifts.
-      const refresh = () => ScrollTrigger.refresh();
+      const refresh = () => {
+        ScrollTrigger.sort();
+        ScrollTrigger.refresh();
+      };
       const rafId = requestAnimationFrame(refresh);
       const t1 = window.setTimeout(refresh, 120);
       const t2 = window.setTimeout(refresh, 450);
+      const t3 = window.setTimeout(refresh, 900);
       window.addEventListener("pageshow", refresh);
+      window.addEventListener("load", refresh);
       window.addEventListener("resize", refresh);
 
       return () => {
@@ -148,7 +154,9 @@ export default function WorkingProcess() {
         cancelAnimationFrame(rafId);
         clearTimeout(t1);
         clearTimeout(t2);
+        clearTimeout(t3);
         window.removeEventListener("pageshow", refresh);
+        window.removeEventListener("load", refresh);
         window.removeEventListener("resize", refresh);
       };
     }, containerRef);
@@ -178,7 +186,7 @@ export default function WorkingProcess() {
               className="process-card-item relative group list-none p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 transition-colors duration-500 hover:bg-white hover:shadow-[0_40px_80px_-15px_rgba(0,146,215,0.12)] overflow-hidden"
             >
               {/* Step Number Background */}
-              <span className="step-number absolute -right-4 -bottom-6 text-9xl font-black text-slate-200 opacity-[0.05] pointer-events-none select-none transition-all">
+              <span className="step-number absolute -right-4 -bottom-6 text-9xl font-black text-[#00BBD7] opacity-[0.05] pointer-events-none select-none transition-all">
                 0{index + 1}
               </span>
 

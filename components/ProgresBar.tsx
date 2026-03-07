@@ -88,10 +88,10 @@ export default function SkillsChart() {
         <div key={section.key} className="space-y-12">
           {/* Header */}
           <div className="chart-header text-center lg:text-left">
-            <span className="inline-block px-4 py-1.5 text-[10px] font-black tracking-[0.3em] text-[#0092D7] uppercase bg-blue-50 rounded-lg mb-4">
+            <span className="inline-block px-4 py-1.5 text-[10px] font-black tracking-[0.3em] text-[#0092D7] bg-blue-50 rounded-lg mb-4">
               Capabilities
             </span>
-            <h2 className="text-3xl md:text-5xl font-black text-slate-900 tracking-tighter">
+            <h2 className="text-3xl font-black text-slate-900 tracking-tighter">
               {section.title}
             </h2>
           </div>

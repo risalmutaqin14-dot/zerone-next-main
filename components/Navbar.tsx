@@ -414,7 +414,7 @@ const Navbar = () => {
           </div>
 
           <div
-            className="relative"
+            className="relative mt-6  md:mt-0"
             onMouseEnter={() => handleNavItemHover("about", true)}
             onMouseLeave={() => handleNavItemHover("about", false)}
           >
@@ -422,7 +422,7 @@ const Navbar = () => {
               href="/about"
               className={`nav-item opacity-0 font-medium transition-colors relative ${getNavTextClass(
                 pathname === "/about"
-              )} ${isMenuOpen ? "text-base py-3 w-full border-b border-gray-100" : ""}`}
+              )} ${isMenuOpen ? "text-base py-2 w-full border-b border-gray-100" : ""}`}
               onClick={closeAllMenus}
             >
               About Us
@@ -467,7 +467,6 @@ const Navbar = () => {
             </button>
 
             <div
-              id="solution-dropdown"
               ref={(el) => {
                 if (el) dropdownRefs.current["solution"] = el;
               }}
@@ -483,7 +482,7 @@ const Navbar = () => {
               onMouseEnter={() => handleDropdownHover("solution", true)}
               onMouseLeave={() => handleDropdownHover("solution", false)}
             >
-              <div id="solution-dropdown" className="bg-gray-50 md:bg-white rounded-xl md:rounded-2xl md:shadow-2xl overflow-hidden">
+              <div className="bg-gray-50 md:bg-white rounded-xl md:rounded-2xl md:shadow-2xl overflow-hidden">
                 <div className="py-2">
                   {solutionLinks.map((link) => (
                     <Link
@@ -502,7 +501,6 @@ const Navbar = () => {
 
           {/* Product Dropdown */}
           <div
-            id="product-dropdown"
             className="relative group w-full md:w-auto text-left md:text-center"
             onMouseEnter={() => handleDropdownHover("product", true)}
             onMouseLeave={() => handleDropdownHover("product", false)}
@@ -527,7 +525,6 @@ const Navbar = () => {
             </button>
 
             <div
-              id="product-dropdown"
               ref={(el) => {
                 if (el) dropdownRefs.current["product"] = el;
               }}
@@ -589,7 +586,7 @@ const Navbar = () => {
           </div>
 
           <div
-            className="relative"
+            className="relative mt-3  md:mt-0"
             onMouseEnter={() => handleNavItemHover("blog", true)}
             onMouseLeave={() => handleNavItemHover("blog", false)}
           >
@@ -617,7 +614,7 @@ const Navbar = () => {
           </div>
 
           <div
-            className="relative"
+            className="relative mt-3 md:mt-0"
             onMouseEnter={() => handleNavItemHover("contact", true)}
             onMouseLeave={() => handleNavItemHover("contact", false)}
           >

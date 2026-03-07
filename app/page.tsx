@@ -25,22 +25,32 @@ import {
   faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
 
-// Metadata API (Pengganti Helmet)
 export const metadata: Metadata = {
-  title:
-    "Zerone.id | Transform Your Institution with Zerone Global Digital Solution",
+  title: "Zerone Global | Digital Solutions for Schools & Institutions",
   description:
-    "Zerone Global: Trusted, secure, and scalable digital solutions for schools, organizations, and communities across Southeast Asia.",
+    "Zerone Global provides trusted and scalable digital solutions for schools, organizations, and communities across Southeast Asia.",
+  
   openGraph: {
-    title: "Zerone Global | Trusted & Scalable Digital Solutions",
+    title: "Zerone Global | Digital Solutions for Schools",
     description:
       "Your trusted technology partner for modernizing education management.",
     url: "https://www.zerone.id",
     type: "website",
-    images: [{ url: "https://www.zerone.id/assets/meta-image-zerone.webp" }],
+    images: [
+      {
+        url: "https://www.zerone.id/assets/meta-image-zerone.webp",
+      },
+    ],
   },
-  alternates: { canonical: "https://www.zerone.id" },
-  robots: "index, follow",
+
+  alternates: {
+    canonical: "https://www.zerone.id",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function Home() {
@@ -181,7 +191,7 @@ export default function Home() {
                 Why Choose Us
               </span>
 
-              <h2 className="text-[24px] md:text-[36px] font-bold text-gray-600 mb-6">
+              <h2 className="text-[24px] md:text-[36px] font-bold text-gray-900 mb-6">
                 Zerone Global Solution
               </h2>
 
@@ -253,6 +263,7 @@ export default function Home() {
                 height="100%"
                 className="border-0"
                 loading="lazy"
+                title="Zerone Global office location map"
               />
             </div>
             <div className="lg:w-1/2">
@@ -332,4 +343,3 @@ export default function Home() {
     </>
   );
 }
-
